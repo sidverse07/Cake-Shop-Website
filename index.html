@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Palace | Crafted With Love</title>
+    <meta name="description" content="Discover handcrafted celebration cakes at Cake Palace.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        ✨ Freshly baked happiness, made for your special moments ✨
+    </div>
+
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">✿</span>
+            CAKE PALACE
+            <small>BAKED WITH LOVE</small>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Our Cakes</a>
+            <a href="#story">Our Story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" onclick="toggleCart()">
+            Bag <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">HANDCRAFTED WITH HEART</p>
+                <h1>Life is short.<br><em>Eat the cake.</em></h1>
+                <p class="hero-description">
+                    Beautiful cakes for birthdays, celebrations,
+                    and all the little moments worth remembering.
+                </p>
+                <a href="#shop" class="primary-button">EXPLORE OUR CAKES ↗</a>
+                <div class="hero-note">♡ Made fresh. Made special. Made for you.</div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1100&q=85"
+                    alt="Beautiful celebration cake">
+                <div class="image-tag">
+                    <span>✦</span>
+                    A LITTLE SLICE OF JOY
+                </div>
+            </div>
+            <div class="hero-number">01 — MADE WITH LOVE</div>
+        </section>
+
+        <section class="benefits">
+            <div>✿ &nbsp; FRESHLY BAKED</div>
+            <div>♡ &nbsp; MADE WITH CARE</div>
+            <div>✧ &nbsp; PERFECT FOR EVERY OCCASION</div>
+            <div>❀ &nbsp; SWEETEN YOUR MOMENTS</div>
+        </section>
+
+        <section class="shop-section" id="shop">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A LITTLE SOMETHING SWEET</p>
+                    <h2>Our Signature <em>Cakes</em></h2>
+                </div>
+                <p>From timeless classics to your newest favourites.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-category="All">All Cakes</button>
+                <button class="filter" data-category="Chocolate">Chocolate</button>
+                <button class="filter" data-category="Celebration">Celebration</button>
+                <button class="filter" data-category="Classic">Classics</button>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="story-section" id="story">
+            <div class="story-image">
+                <img
+                    src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=85"
+                    alt="Handcrafted cake">
+            </div>
+            <div class="story-content">
+                <p class="eyebrow">MORE THAN JUST DESSERT</p>
+                <h2>Every cake has<br>a <em>sweet story.</em></h2>
+                <p>
+                    We believe the best memories are made around the table.
+                    Every celebration cake is a chance to make someone smile,
+                    share a little joy, and turn an ordinary day into something special.
+                </p>
+                <a href="#contact" class="text-link">LET'S MAKE IT SPECIAL ↗</a>
+            </div>
+        </section>
+
+        <section class="order-section" id="contact">
+            <div class="order-intro">
+                <p class="eyebrow">YOUR CELEBRATION, YOUR WAY</p>
+                <h2>Let's create<br>something <em>sweet.</em></h2>
+                <p>Tell us about your dream cake and start your order enquiry.</p>
+                <div class="contact-note">♡ Every special occasion deserves a special cake.</div>
+            </div>
+
+            <form id="orderForm" class="order-form">
+                <label for="customerName">Your name</label>
+                <input id="customerName" type="text" placeholder="Enter your name" required>
+
+                <label for="customerPhone">Phone number</label>
+                <input id="customerPhone" type="tel" placeholder="Enter your phone number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+
+                <label for="cakeType">Choose your cake</label>
+                <select id="cakeType" required>
+                    <option value="">Select a cake</option>
+                </select>
+
+                <div class="form-row">
+                    <div>
+                        <label for="cakeSize">Cake size</label>
+                        <select id="cakeSize" required>
+                            <option value="">Select size</option>
+                            <option value="0.5 kg">0.5 kg</option>
+                            <option value="1 kg">1 kg</option>
+                            <option value="2 kg">2 kg</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="deliveryDate">Required date</label>
+                        <input id="deliveryDate" type="date" required>
+                    </div>
+                </div>
+
+                <label for="cakeMessage">Special message (optional)</label>
+                <textarea id="cakeMessage" rows="3"
+                    placeholder="Birthday message, design idea, etc."></textarea>
+
+                <button type="submit" class="primary-button submit-button">
+                    SUBMIT ENQUIRY ↗
+                </button>
+                <p id="formMessage" class="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="newsletter">
+            <p class="eyebrow">A LITTLE SWEETNESS GOES A LONG WAY</p>
+            <h2>Stay in our <em>sweet circle.</em></h2>
+            <p>Follow our journey for more delicious inspiration.</p>
+            <a class="primary-button" href="#shop">FIND YOUR FAVOURITE CAKE ↗</a>
+        </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" hidden>
+        <div class="cart-header">
+            <h2>Your Sweet Bag</h2>
+            <button class="close-cart" onclick="toggleCart()" aria-label="Close cart">✕</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-total">Total: <strong id="cartTotal">₹0</strong></div>
+        <button class="primary-button checkout-button" onclick="goToOrder()">
+            CONTINUE TO ENQUIRY ↗
+        </button>
+    </aside>
+
+    <div id="cartOverlay" class="cart-overlay" hidden onclick="toggleCart()"></div>
+
+    <footer class="footer">
+        <a href="#home" class="footer-logo">CAKE PALACE ✿</a>
+        <p>Making life's sweetest moments even sweeter.</p>
+        <p class="copyright">© 2026 Cake Palace · DevOps ISE-2 Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
