@@ -252,3 +252,26 @@ dateInput.min = localDate;
 
 renderCakes();
 updateCart();
+
+// Change 1: Add a dismissible announcement banner
+(function () {
+    const banner = document.createElement("div");
+    banner.id = "cake-announcement";
+
+    const message = document.createElement("span");
+    message.textContent =
+        "Freshly baked happiness! Explore our cakes and custom cake designs.";
+
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.textContent = "\u00D7";
+    closeButton.setAttribute("aria-label", "Close announcement");
+
+    closeButton.addEventListener("click", function () {
+        banner.remove();
+    });
+
+    banner.appendChild(message);
+    banner.appendChild(closeButton);
+    document.body.prepend(banner);
+})();

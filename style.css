@@ -722,3 +722,26 @@ h1 em, h2 em {
         scroll-behavior: auto !important;
     }
 }
+
+/* Change 1: Announcement Banner */
+#cake-announcement {
+    position: relative;
+    background: #761b36;
+    color: white;
+    text-align: center;
+    padding: 12px 42px 12px 16px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+#cake-announcement button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
