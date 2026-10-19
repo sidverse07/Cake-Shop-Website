@@ -745,3 +745,29 @@ h1 em, h2 em {
     font-size: 23px;
     cursor: pointer;
 }
+
+
+/* Change 3: Back to Top Button */
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    z-index: 9998;
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background-color: #761b36;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #a12b4d;
+    transform: translateY(-3px);
+}

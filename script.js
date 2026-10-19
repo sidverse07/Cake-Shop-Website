@@ -275,3 +275,31 @@ updateCart();
     banner.appendChild(closeButton);
     document.body.prepend(banner);
 })();
+
+/* Change 3: Back to Top Button */
+(function () {
+    const button = document.createElement("button");
+
+    button.id = "back-to-top";
+    button.type = "button";
+    button.textContent = "\u2191";
+    button.setAttribute("aria-label", "Back to top");
+    button.title = "Back to top";
+
+    document.body.appendChild(button);
+
+    function updateButtonVisibility() {
+        button.style.display = window.scrollY > 300 ? "block" : "none";
+    }
+
+    window.addEventListener("scroll", updateButtonVisibility);
+
+    button.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    updateButtonVisibility();
+})();
