@@ -327,3 +327,33 @@ updateCart();
     document.body.appendChild(button);
 })();
 
+
+/* Change 4: Reading Progress Bar */
+(function () {
+    const container = document.createElement("div");
+    container.id = "reading-progress-container";
+    container.setAttribute("aria-label", "Page reading progress");
+
+    const bar = document.createElement("div");
+    bar.id = "reading-progress-bar";
+
+    container.appendChild(bar);
+    document.body.appendChild(container);
+
+    function updateProgress() {
+        const scrollableHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+
+        const progress = scrollableHeight > 0
+            ? (window.scrollY / scrollableHeight) * 100
+            : 0;
+
+        bar.style.width = Math.min(progress, 100) + "%";
+    }
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+
+    updateProgress();
+})();
+
