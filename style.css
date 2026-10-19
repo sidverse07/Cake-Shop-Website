@@ -771,3 +771,48 @@ h1 em, h2 em {
     background-color: #a12b4d;
     transform: translateY(-3px);
 }
+
+
+/* Change 3: Dark Mode */
+body.dark-mode {
+    background-color: #17131a;
+    color: #f5edf2;
+}
+
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode section,
+body.dark-mode footer {
+    background-color: #241c27;
+    color: #f5edf2;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color: #f5edf2;
+}
+
+body.dark-mode .cake-card,
+body.dark-mode .product-card,
+body.dark-mode .contact-form {
+    background-color: #302533;
+    color: #f5edf2;
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 18px;
+    background-color: #761b36;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}

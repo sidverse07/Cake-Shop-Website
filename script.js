@@ -303,3 +303,27 @@ updateCart();
 
     updateButtonVisibility();
 })();
+
+
+/* Change 3: Dark Mode Toggle */
+(function () {
+    const button = document.createElement("button");
+
+    button.id = "dark-mode-toggle";
+    button.type = "button";
+    button.textContent = "🌙 Dark Mode";
+    button.setAttribute("aria-pressed", "false");
+
+    button.addEventListener("click", function () {
+        const isDark = document.body.classList.toggle("dark-mode");
+
+        button.textContent = isDark
+            ? "☀️ Light Mode"
+            : "🌙 Dark Mode";
+
+        button.setAttribute("aria-pressed", String(isDark));
+    });
+
+    document.body.appendChild(button);
+})();
+
