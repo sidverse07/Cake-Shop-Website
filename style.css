@@ -835,3 +835,40 @@ body.dark-mode .contact-form {
     background-color: #761b36;
     transition: width 0.1s ease;
 }
+
+
+/* Change 5: Font Size Controls */
+#font-size-controls {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9997;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#font-size-controls button {
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background: #761b36;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#font-size-controls button:hover {
+    background: #a12b4d;
+}
+
+#font-size-controls span {
+    color: #241c27;
+    font-size: 13px;
+}

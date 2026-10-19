@@ -357,3 +357,45 @@ updateCart();
     updateProgress();
 })();
 
+
+/* Change 5: Font Size Controls */
+(function () {
+    const controls = document.createElement("div");
+    controls.id = "font-size-controls";
+
+    const decreaseButton = document.createElement("button");
+    decreaseButton.type = "button";
+    decreaseButton.textContent = "A−";
+    decreaseButton.setAttribute("aria-label", "Decrease font size");
+    decreaseButton.title = "Decrease font size";
+
+    const sizeLabel = document.createElement("span");
+    sizeLabel.textContent = "Text";
+
+    const increaseButton = document.createElement("button");
+    increaseButton.type = "button";
+    increaseButton.textContent = "A+";
+    increaseButton.setAttribute("aria-label", "Increase font size");
+    increaseButton.title = "Increase font size";
+
+    controls.append(decreaseButton, sizeLabel, increaseButton);
+    document.body.appendChild(controls);
+
+    let fontSize = 16;
+
+    function applyFontSize() {
+        document.documentElement.style.fontSize = fontSize + "px";
+    }
+
+    decreaseButton.addEventListener("click", function () {
+        fontSize = Math.max(12, fontSize - 2);
+        applyFontSize();
+    });
+
+    increaseButton.addEventListener("click", function () {
+        fontSize = Math.min(24, fontSize + 2);
+        applyFontSize();
+    });
+
+    applyFontSize();
+})();
