@@ -130,7 +130,6 @@ Jenkins is used to check out the project from GitHub and validate that the main 
 The pipeline checks out the repository and validates the presence of `index.html`, `style.css`, and `script.js`.
 
 ## 9. Screenshots and Evidence
-## 9. Screenshots and Evidence
 
 ### 9.1 Website Screenshots
 
@@ -171,8 +170,6 @@ The pipeline checks out the repository and validates the presence of `index.html
 [View Cake Shop Website Repository](https://github.com/sidverse07/Cake-Shop-Website)
 
 ### 9.8 Jenkins Integration
-
-### 9.7 Jenkins Integration
 
 **Jenkins Job Dashboard**
 
