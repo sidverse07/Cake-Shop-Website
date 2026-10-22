@@ -1,5 +1,28 @@
 # Cake Palace - Premium Cake Shop Website
 
+## 👩‍🎓 Student Details
+
+| Field | Details |
+|---|---|
+| Name | Siddhi Narayandas Sapate |
+| Roll No. | 07 |
+| Div | B |
+| Subject | DevOps and Kubernetes |
+
+## 📑 Table of Contents
+
+1. [Project Introduction](#1-project-introduction)
+2. [Project Objective](#2-project-objective)
+3. [Technologies Used](#3-technologies-used)
+4. [Website Features](#4-website-features)
+5. [How to Run the Website](#5-how-to-run-the-website)
+6. [Changes Made](#6-changes-made)
+7. [Git and GitHub Workflow](#7-git-and-github-workflow)
+8. [Jenkins Integration](#8-jenkins-integration)
+9. [Screenshots and Evidence](#9-screenshots-and-evidence)
+10. [Conclusion](#10-conclusion)
+11. [Project Limitation](#11-project-limitation)
+
 ## 1. Project Introduction
 
 Cake Palace is a responsive cake shop website developed using HTML, CSS, and JavaScript. It provides a simple and attractive interface for viewing cakes and exploring cake shop features.
