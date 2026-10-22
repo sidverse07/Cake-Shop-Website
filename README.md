@@ -1,4 +1,5 @@
-# Cake Palace - Premium Cake Shop Website
+<h1 align="center">🎂 🍰 Cake Palace – Premium Cake Shop 🍰 🎂</h1>
+<p align="center"><strong>✨ Sweet Moments, Beautiful Cakes! ✨</strong></p>
 
 ## 👩‍🎓 Student Details
 
